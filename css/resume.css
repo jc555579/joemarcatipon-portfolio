@@ -1,0 +1,174 @@
+/* css/resume.css */
+.resume {
+    padding: 100px 10%;
+    background: #080808;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.resume-subtitle {
+    font-size: 1.5rem;
+    color: var(--vivid-azure);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Timeline Styling */
+.timeline {
+    border-left: 2px solid rgba(13, 106, 159, 0.3);
+    padding-left: 30px;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -37px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--vivid-azure);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--vivid-azure);
+}
+
+.timeline-date {
+    font-family: 'Courier New', monospace;
+    color: var(--vivid-azure);
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.timeline-item .institution {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Certification Grid */
+.cert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(13, 106, 159, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    background: rgba(13, 106, 159, 0.08);
+    border-color: var(--vivid-azure);
+    transform: translateX(5px);
+}
+
+.cert-card.gold-tier {
+    border-left: 4px solid #FFD700; /* Special highlight for AWS */
+}
+
+.cert-info h4 {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.cert-info p {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.verify-link {
+    color: var(--vivid-azure);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.verify-link:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+.download-container {
+    margin-top: 30px;
+    padding-left: 30px; /* Aligns with timeline text */
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: var(--vivid-azure);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-download:hover {
+    background: transparent;
+    border-color: var(--vivid-azure);
+    color: var(--vivid-azure);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(13, 106, 159, 0.3);
+}
+
+/* Cert Image Fixes */
+.cert-img-container {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Status Badge for AWS */
+.status-badge {
+    display: inline-block;
+    background: #222;
+    color: var(--vivid-azure);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(13, 106, 159, 0.3);
+}
+
+@media (max-width: 968px) {
+    .resume-grid { grid-template-columns: 1fr; }
+}
