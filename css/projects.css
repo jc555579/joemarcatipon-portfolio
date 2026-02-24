@@ -1,0 +1,105 @@
+/* css/projects.css */
+.projects {
+    padding: 100px 10%;
+    background: #050505; /* Deep black for contrast */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(13, 106, 159, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--vivid-azure);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+    position: relative;
+    height: 220px;
+    background: #111;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Dimmed to make tags pop */
+    transition: 0.4s;
+}
+
+.project-card:hover .project-image img {
+    opacity: 0.9;
+    scale: 1.05;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(13, 106, 159, 0.8);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    height: 70px; /* Keeps cards aligned */
+    overflow: hidden;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-small {
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    background: var(--vivid-azure);
+    color: white;
+}
+
+.btn-small.outline {
+    background: transparent;
+    border: 1px solid var(--vivid-azure);
+    color: var(--vivid-azure);
+}
