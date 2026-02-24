@@ -1,16 +1,11 @@
 /* css/nav.css */
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
     height: 80px;
-    
-    /* Changed from RGBA to solid Hex to match your logo background exactly */
     background-color: #133F44; 
-    
-    /* Removed backdrop-filter to prevent color shifting */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: sticky;
     top: 0;
@@ -18,18 +13,14 @@
 }
 
 .logo img {
-    /* Slightly increased height to fill the bar better */
     height: 50px; 
     width: auto;
-    display: block;
-    
-    /* This ensures the image edges blend into the background color */
-    mix-blend-mode: normal; 
 }
 
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    list-style: none;
 }
 
 .nav-links a {
@@ -37,10 +28,62 @@
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 1.2px;
-    opacity: 0.8;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    opacity: 1;
     color: var(--vivid-azure);
+}
+
+/* HAMBURGER MENU STYLING */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    z-index: 1001; /* Stay above the menu */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+/* RESPONSIVE NAV (Mobile & Tablet) */
+@media screen and (max-width: 768px) {
+    .navbar { padding: 0 5%; }
+
+    .menu-toggle { display: block; }
+
+    /* Animated Hamburger to "X" */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-links {
+        position: fixed; /* Changed to fixed to cover screen */
+        top: 80px;
+        left: -100%; /* Hide off-screen */
+        flex-direction: column;
+        background: #133F44;
+        width: 100%;
+        height: calc(100vh - 80px); /* Full height */
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        gap: 2rem;
+        padding-top: 50px;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0; /* Slide in when active */
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+    }
 }

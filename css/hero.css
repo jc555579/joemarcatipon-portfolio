@@ -70,7 +70,7 @@
 .social-icons img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1); /* Makes icons white */
+    filter: brightness(0) invert(1); 
     opacity: 0.7;
     transition: 0.3s;
 }
@@ -80,7 +80,6 @@
     transform: scale(1.1);
 }
 
-/* Large Image Logic */
 .hero-image {
     flex: 1.8; 
     display: flex;
@@ -90,7 +89,7 @@
 
 .hero-image img {
     width: 100%;
-    max-width: 700px; /* Large and impactful */
+    max-width: 700px;
     height: auto;
     border-radius: 8px;
     border: 1px solid rgba(19, 63, 68, 0.3);
@@ -103,7 +102,6 @@
     100% { transform: translateY(0px); }
 }
 
-/* Responsive fix: Stack on mobile */
 @media (max-width: 968px) {
     .hero {
         flex-direction: column-reverse;

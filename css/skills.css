@@ -114,3 +114,9 @@
     }
     .skills { padding: 60px 5%; }
 }
+
+@media (max-width: 768px) {
+    .skills-grid { grid-template-columns: 1fr; } /* Stack soft skills and technical */
+    .skills-box { padding: 1.5rem; } /* Reduce padding */
+    .skill-info span:first-child { font-size: 0.85rem; }
+}
