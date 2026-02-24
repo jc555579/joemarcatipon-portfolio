@@ -16,3 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
     image.style.opacity = '1';
   }, 100);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const progressBars = document.querySelectorAll('.progress');
+
+  const animateBars = () => {
+    progressBars.forEach(bar => {
+      const rect = bar.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        const targetWidth = bar.getAttribute('style').split('width: ')[1];
+        bar.style.width = targetWidth;
+      }
+    });
+  };
+
+  // Run on scroll
+  window.addEventListener('scroll', animateBars);
+  // Run once on load
+  setTimeout(animateBars, 300);
+});
