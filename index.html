@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
@@ -42,15 +43,16 @@
             <div class="cta-group">
                 <a href="#projects" class="btn-primary">→ My Projects</a>
                 <div class="social-icons">
-                    <a href="#" aria-label="GitHub"><img src="icons/github-icon.svg" alt="github icon"></a>
-                    <a href="#" aria-label="LinkedIn"><img src="icons/linkedin-icon.svg" alt="linkedin icon"></a>
+                    <a href="https://github.com/jc555579" aria-label="GitHub" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="github icon"></a>
+                    <a href="https://www.linkedin.com/in/joemar-catipon-68b296317/" aria-label="LinkedIn" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="linkedin icon"></a>
                 </div>
             </div>
         </div>
 
         <div class="hero-image">
-            <div class="image-border">
+            <div class="image-inner-container">
                 <img src="images/back-end-cloud.png" alt="Backend Visualization">
+                <div class="glow-effect"></div>
             </div>
         </div>
     </section>
@@ -103,14 +105,32 @@
                     <h3 class="skills-subtitle">Technical Proficiency</h3>
                     
                     <div class="progress-container">
-                        <p class="category-label">Backend & Infrastructure</p>
+                        <p class="category-label">Programming & Development</p>
                         <div class="skill-item">
-                            <div class="skill-info"><span>Node.js / Express</span><span>85%</span></div>
+                            <div class="skill-info"><span>HTML / CSS / JavaScript</span><span>60%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Node.js</span><span>85%</span></div>
                             <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info"><span>Linux / Shell Scripting</span><span>75%</span></div>
+                            <div class="skill-info"><span>MongoDB</span><span>80%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>MySQL</span><span>75%</span></div>
                             <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Angular</span><span>50%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
+                        </div>
+
+                        <p class="category-label">Cloud & DevOps</p>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Cloud Computing Fundamentals</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info"><span>AWS Cloud Practitioner</span><span>65%</span></div>
@@ -120,19 +140,19 @@
                             <div class="skill-info"><span>Docker</span><span>50%</span></div>
                             <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>MongoDB / SQL</span><span>80%</span></div>
-                            <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-                        </div>
 
-                        <p class="category-label">Supporting Technologies</p>
-                        <div class="skill-item supporting">
-                            <div class="skill-info"><span>Angular</span><span>50%</span></div>
-                            <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
+                        <p class="category-label">Tools & Platforms</p>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Git / GitHub</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
                         </div>
-                        <div class="skill-item supporting">
-                            <div class="skill-info"><span>Web Fundamentals (HTML/CSS/JS)</span><span>70%</span></div>
-                            <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Linux / Command Line</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Shell Scripting</span><span>55%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 55%"></div></div>
                         </div>
                     </div>
                 </div>
@@ -273,22 +293,60 @@
                 </div>
             </div>
 
-            <form action="#" class="contact-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Full Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <div class="input-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">
-                    Send Message <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
+        <form action="https://formspree.io/f/mwvnaplq" method="POST" class="contact-form">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+                Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
         </div>
     </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="JC Logo">
+                    <p>Building scalable systems and secure cloud infrastructure.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                    </ul>
+                </div>
+
+            <div class="footer-socials">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/jc555579" target="_blank">
+                        <img src="icons/github-icon.svg" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/joemar-catipon-68b296317/" target="_blank">
+                        <img src="icons/linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Joemar Catipon. All Rights Reserved.</p>
+                <p class="built-with">Built with <span class="tech-stack">HTML | CSS | JavaScript </span></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

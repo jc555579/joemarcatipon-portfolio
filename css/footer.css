@@ -1,0 +1,109 @@
+/* Footer Styling */
+.footer {
+    padding: 60px 10% 30px;
+    /* Updated to use your Dark Azure color with a slight gradient for depth */
+    background: linear-gradient(180deg, #133F44 0%, #0a2124 100%);
+    border-top: 1px solid rgba(13, 106, 159, 0.3);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-logo img {
+    height: 40px; 
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    color: #cbd5d6; /* Lightened to stay readable on the dark azure */
+    font-size: 0.9rem;
+    max-width: 300px;
+}
+
+.footer-links h4, 
+.footer-socials h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #a8bcbd; /* Muted teal-gray to match the theme */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff; /* Highlight to white on hover for contrast */
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #a8bcbd;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8da1a3;
+    font-size: 0.85rem;
+}
+
+.tech-stack {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-logo p {
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

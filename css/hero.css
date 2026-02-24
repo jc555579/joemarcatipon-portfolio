@@ -96,3 +96,20 @@
     border: 1px solid rgba(19, 63, 68, 0.3);
     box-shadow: 0 30px 60px rgba(0,0,0,0.6);
 }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive fix: Stack on mobile */
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .description { margin: 0 auto 2.5rem auto; }
+    .cta-group { justify-content: center; }
+}

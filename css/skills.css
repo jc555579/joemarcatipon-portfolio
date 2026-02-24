@@ -9,7 +9,7 @@
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 30px; /* Tighter gap for a more unified look */
+    gap: 30px;
     align-items: start;
 }
 
@@ -18,17 +18,17 @@
     border: 1px solid rgba(13, 106, 159, 0.15);
     padding: 3rem;
     border-radius: 12px;
-    backdrop-filter: blur(10px); /* Adds depth */
+    backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .skills-subtitle {
     font-size: 1.4rem;
-    color: #fff; /* White title stands out better */
+    color: #fff;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-left: 4px solid var(--vivid-azure); /* Accent line */
+    border-left: 4px solid var(--vivid-azure);
     padding-left: 15px;
 }
 
@@ -37,42 +37,41 @@
     color: var(--vivid-azure);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 30px 0 15px 0;
+    margin: 40px 0 15px 0;
     font-weight: 800;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .category-label:first-of-type {
     margin-top: 0;
 }
 
-/* Fix for the "Cluttered" text issue */
 .skill-item {
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 .skill-info {
     display: flex;
-    justify-content: space-between; /* This separates Name and % */
+    justify-content: space-between; 
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .skill-info span:first-child {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: #e0e0e0;
 }
 
 .skill-info span:last-child {
-    font-family: 'Courier New', Courier, monospace; /* Tech look for % */
-    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
     color: var(--vivid-azure);
 }
 
 .progress-bar {
     width: 100%;
-    height: 6px; /* Slightly thinner is more elegant */
+    height: 6px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     overflow: hidden;
@@ -82,21 +81,12 @@
     height: 100%;
     background: linear-gradient(90deg, #0D6A9F 0%, #133F44 100%);
     border-radius: 20px;
-    width: 0; /* JS will fill this */
     transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
-}
-
-/* Supporting skills - Subtle and clean */
-.skill-item.supporting .progress {
-    background: #333;
-}
-
-.skill-item.supporting .skill-info span {
-    color: #666;
 }
 
 /* Soft Skills Styling */
 .soft-skills-list {
+    list-style: none;
     padding: 0;
 }
 
@@ -115,6 +105,7 @@
     background: rgba(13, 106, 159, 0.1);
     transform: translateX(10px);
     color: #fff;
+    border-color: var(--vivid-azure);
 }
 
 @media (max-width: 968px) {
