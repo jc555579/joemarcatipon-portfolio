@@ -1,0 +1,76 @@
+/* css/about.css */
+
+.about {
+    padding: 100px 10%;
+    /* Pattern background is already inherited from general.css */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gradient Title Logic */
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #0D6A9F 0%, #133F44 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid var(--dark-azure);
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 0 30px rgba(13, 106, 159, 0.2);
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 1.5;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* Mobile Responsive adjustment */
+@media (max-width: 968px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
