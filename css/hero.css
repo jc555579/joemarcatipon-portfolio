@@ -1,0 +1,98 @@
+.hero {
+    min-height: calc(100vh - 80px); /* Full height minus navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.greeting {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--vivid-azure);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.highlight { 
+    color: var(--vivid-azure); 
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+}
+
+/* CTA & Socials */
+.cta-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-primary {
+    background: var(--vivid-azure);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary:hover {
+    background: #0b5a87;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(13, 106, 159, 0.3);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Large Image Logic */
+.hero-image {
+    flex: 1.8; 
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 700px; /* Large and impactful */
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(19, 63, 68, 0.3);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
